@@ -2,7 +2,6 @@ package com.example.trainsystem.Controller;
 
 import com.example.trainsystem.Entity.Employee;
 import com.example.trainsystem.ServiceImpl.EmployeeServiceImpl;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

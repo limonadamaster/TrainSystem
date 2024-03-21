@@ -52,7 +52,7 @@ public class TrainServiceImpl {
         GlobalGraph.addTrains(foundedTrain);
         GlobalGraph.addRoute(foundedTrain, distanceBetweenStations);
 
-        if (foundedTrain.getRoute().size() > 0) isRouteCreated = true;
+        if (!foundedTrain.getRoute().isEmpty()) isRouteCreated = true;
 
         return isRouteCreated;
     }
