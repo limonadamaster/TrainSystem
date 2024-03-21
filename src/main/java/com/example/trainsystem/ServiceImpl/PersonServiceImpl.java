@@ -21,10 +21,7 @@ public class PersonServiceImpl {
     }
 
     public final boolean addPerson(Person person) {
-       if(personRepository.save(person)!=null){
-           return true;
-       }
-       return false;
+        return personRepository.save(person) != null;
     }
 
     public final boolean makeDiscoundCard(String personIdentificationNumber){

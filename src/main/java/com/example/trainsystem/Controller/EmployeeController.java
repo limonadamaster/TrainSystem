@@ -2,7 +2,6 @@ package com.example.trainsystem.Controller;
 
 import com.example.trainsystem.Entity.Employee;
 import com.example.trainsystem.ServiceImpl.EmployeeServiceImpl;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -28,5 +27,10 @@ public class EmployeeController {
     @GetMapping("/get/name")
     public Employee findByName(@RequestParam String name){
         return employeeService.findByName(name);
+    }
+
+    @PostMapping("/add/credential")
+    public Employee addEmployeeWithCredential(@RequestBody Employee employee){
+        return  employeeService.addEmployeeWithCredentials(employee);
     }
 }

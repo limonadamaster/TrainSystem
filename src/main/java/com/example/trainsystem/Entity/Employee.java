@@ -1,10 +1,11 @@
 package com.example.trainsystem.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Cascade;
+
 
 @Entity
 @Data
@@ -26,4 +27,8 @@ public class Employee {
     @JoinColumn(name = "Department_id")
    private Department department;
 
+    @OneToOne
+    @JsonIgnore
+    @JoinColumn(name = "Credententials_id")
+    private Credentials credentials;
 }
