@@ -1,20 +1,18 @@
 package com.example.trainsystem.ServiceImpl;
 
-import com.example.trainsystem.DistanceCalculator;
+import com.example.trainsystem.util.DistanceCalculator;
 import com.example.trainsystem.Entity.Train;
 import com.example.trainsystem.Entity.TrainStation;
-import com.example.trainsystem.GlobalGraph;
+import com.example.trainsystem.util.GlobalGraph;
 import com.example.trainsystem.Repository.TrainRepository;
 import com.example.trainsystem.Repository.TrainStationRepository;
-import org.jgrapht.Graph;
 import org.jgrapht.GraphPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
-import static com.example.trainsystem.GlobalGraph.bfsTraversal;
+import static com.example.trainsystem.util.GlobalGraph.bfsTraversal;
 
 @Service
 public class TrainServiceImpl {

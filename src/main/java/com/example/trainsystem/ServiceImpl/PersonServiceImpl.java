@@ -2,7 +2,7 @@ package com.example.trainsystem.ServiceImpl;
 
 import com.example.trainsystem.Entity.DiscoundCard;
 import com.example.trainsystem.Entity.Person;
-import com.example.trainsystem.GenerateCardNumber;
+import com.example.trainsystem.util.GenerateCardNumber;
 import com.example.trainsystem.Repository.DiscountCardRepository;
 import com.example.trainsystem.Repository.PersonRepository;
 import org.springframework.stereotype.Service;

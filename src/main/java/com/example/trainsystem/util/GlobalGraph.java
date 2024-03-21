@@ -1,8 +1,9 @@
-package com.example.trainsystem;
+package com.example.trainsystem.util;
 
 import com.example.trainsystem.Entity.Train;
 import com.example.trainsystem.Entity.TrainStation;
 import lombok.Data;
+import org.apache.logging.log4j.util.PropertySource;
 import org.jgrapht.Graph;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
@@ -10,6 +11,7 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.DirectedWeightedMultigraph;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Data

@@ -1,4 +1,4 @@
-package com.example.trainsystem;
+package com.example.trainsystem.util;
 
 import com.example.trainsystem.Entity.TrainStation;
 

@@ -1,4 +1,4 @@
-package com.example.trainsystem;
+package com.example.trainsystem.util;
 
 import java.util.Random;
 
