@@ -26,4 +26,5 @@ public class Credentials {
      this.passwordForEmployee=credentials.getPasswordForEmployee();
      this.codeForEmployeeAccess=credentials.getCodeForEmployeeAccess();
     }
+
 }

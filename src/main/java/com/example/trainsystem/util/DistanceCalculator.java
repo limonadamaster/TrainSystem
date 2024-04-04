@@ -11,4 +11,8 @@ public class DistanceCalculator {
 
         return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
     }
+    public int calculateTwo(int a ,int b ){
+        return a+b;
+    }
+
 }

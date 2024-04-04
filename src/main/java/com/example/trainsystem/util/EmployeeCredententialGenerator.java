@@ -4,6 +4,7 @@ import com.example.trainsystem.Entity.Credentials;
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,12 @@ public class EmployeeCredententialGenerator {
     private String password;
     private String code;
 
+    private PasswordEncoder passwordEncoder;
+
+    public EmployeeCredententialGenerator(PasswordEncoder passwordEncoder){
+        this.passwordEncoder=passwordEncoder;
+    }
+
     public Credentials generateCredentential(){
 
        generateCode();
@@ -23,7 +30,9 @@ public class EmployeeCredententialGenerator {
        Credentials credentials = new Credentials();
 
        credentials.setCodeForEmployeeAccess(code);
-       credentials.setPasswordForEmployee(password);
+       //hash it
+
+       credentials.setPasswordForEmployee(passwordEncoder.encode(password));
 
        return credentials;
 

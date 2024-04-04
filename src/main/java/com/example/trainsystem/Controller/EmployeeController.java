@@ -2,9 +2,13 @@ package com.example.trainsystem.Controller;
 
 import com.example.trainsystem.Entity.Employee;
 import com.example.trainsystem.ServiceImpl.EmployeeServiceImpl;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+import java.util.List;
+
+@Controller
 @RequestMapping("/v1/employee")
 public class EmployeeController {
 
@@ -33,4 +37,12 @@ public class EmployeeController {
     public Employee addEmployeeWithCredential(@RequestBody Employee employee){
         return  employeeService.addEmployeeWithCredentials(employee);
     }
+
+    @GetMapping("/employees")
+    public String getAllEmployees(Model model){
+        List<Employee> employees = this.employeeService.getAllEntities();
+        model.addAttribute("employees",employees);
+        return "employees";
+    }
+
 }
